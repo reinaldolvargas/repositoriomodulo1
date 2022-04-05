@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../../imagem/IMG-ICON.ico" type="image/x-icon">
+    <title>Imagens</title>
+    
+</head>
+<body>
+    <h1 style="margin-top: 1cm; margin-left: 4cm;background-color: aqua; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;" >Imagem dinamica</h1>
+    <a href="ex15/indice.html">indice &#x1f6D6;</a>
+    <p>Tente abrir este site em varios dispositivos diferentes <br>
+    ou aumente e diminua o tamanho do seu navegador.</p>
+    <p>Para inserir imagem dinamica, que aumenta e diminui de acordo com a tela do aparelho
+    a preciso abrir uma &lt;picture&gt; e dentro da 'picture'duas 'sourse' e uma 'img'</p>
+    <p>Ex:. <br>
+    &lt;picture&gt;<br>
+        &lt;source media="(max-width:750px )" srcset="img_pq.png" > <br>
+        &lt;source media="(max-width:1050px)" srcset="img_med.png" > <br>
+        &lt;img src="img_gd.png" alt="imagen flexivel"> <br>
+        &lt;/source&gt;
+    </p>
+    <p>> 'sourse' e usado para imagens, audio e video significa criar opções <br>
+     'se opção a não rodar, opção b ou c'</p>
+    <picture>
+        <source media="(max-width:750px)" srcset="ex15/img_pq.png">
+        <source media="(max-width:1050px)" srcset="ex15/img_med.png">
+        <img src="ex15/img_gd.png" alt="imagen flexivel">
+    </picture>
+    
+    <h1 style="background-color: chartreuse;">Reproduzindo audio</h1>
+    <p>vamos aprender a reproduzir audio</p>
+    <p>Aqui a 'sourse' e colocada dentro da tag &lt;audio&gt;</p>
+    <p>Ex:. <br>
+     <mark>&lt;audio preload="metadata" controls> <br></mark>
+        &lt;source src="ex15/Raimundos   Nariz de doze.mp3" type="audio/mp3"> <br>
+        &lt;source src="ex15/Raimundos   Nariz de doze.mp3" type="audio/wav"> <br>
+    <mark>&lt;/audio></mark>    
+    </p>
+    
+        <audio preload="metadata" controls>
+    
+        <source src="ex15/Raimundos   Nariz de doze.mp3" type="audio/mp3">
+        <source src="ex15/Raimundos   Nariz de doze.mp3" type="audio/wav">
+    </audio>    
+        <p>se o audio não abrir no navegador faça o douload <a href="ex15/Raimundos   Nariz de doze.mp3">aqui</a></p>
+    
+</body>
+</html>

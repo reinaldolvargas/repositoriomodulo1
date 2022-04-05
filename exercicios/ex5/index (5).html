@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="icon1.png" type="image/x-icon">
+    <title>Formatação de textos</title>
+</head>
+<body>
+    <h1>principais formatações</h1>
+    <a href="../ex15/indice.html">indice &#x1f6D6;</a> 
+    <h2>negrito</h2>
+    <p><b>negrito usando <q>b - /b</q></b> modo baseado em forma , não em semantica</p>
+    <p><strong><i>negrito usando</i> <q>strong - /strong</q></strong> forma <strong>semantica</strong> baseada em dar sentido ao destaque</p>
+    a<p>para formater um trecho de uma frase podemos usar <q><strong><i>crt + shift + p</i></strong></q>, selecionamos o trecho
+        da frase e apertamos a sequencia de teclas descrita, abrira uma janela ondo escolhe 
+        <strong>(wrap with abreviation)</strong> ou digite <q><strong>abb</strong></q> para ser direcionado para a ferramenta
+        em seguida digite a <q><strong>teg</strong></q> referente a formatação desejada e enter
+    </p>
+    <h2><strong><em>Italico</em></strong></h2>
+    <p>formatação usando a teg <strong>i</strong> para <i>italico</i> e baseado somente em forma.</p>
+    <p>formatação usando a teg <q><strong>em</strong></q> para <em>italico</em> e baseado em semantica.</p>
+    <p>o resultado e o mesmo, muda o sentido da formatação para o <strong><q><em>HTML5</em></q></strong></p>
+    <h2><mark>marcador de texto</mark></h2>
+    <p>uso da teg <q><strong><mark>mark</mark></strong></q> para marcar texto</p>
+    <p>
+        para mudar a cor do marca texto usa-se uma ferramenta <strong><mark style="background-color: greenyellow;">CSS</mark></strong> em
+        comjunto com a tag teg + ferramenta style beckground-color = cor desejada <br>
+        ex. <mark style="background-color: fuchsia;">mark styli=beckground-color: cor</mark>
+    </p>
+    Para tornar uma cor diferente do padrão utilizavel em toda a pagina
+    a mudança tem que ser feita 
+    no cabeçario usando <q>style a teg mark abre couchetes background-color cor fecha couchetes
+        assim toda vez que usar o marcador a cor padrão sera a 
+        escolhida no parametro do cabecario (parametro global)
+    </q>
+    <h2>Texto grande e pequeno</h2>
+    <p>Estamos crinado um <big>texto grande</big> e um <small>texto pequeno</small> neste paragrafo
+    a tag <q>big /big</q> e derivada do HTML4 esta obsoleta em vias de estinçã
+     a teg <q>small /small</q> ainda esta em uso</p>
+    <h2>texto deletado</h2>
+    <p>usamos a teg <q>del /del</q> para <del>riscar</del> o texto dando a ideia de que ele foi retirado de documento</p>    
+    <h2>texto inserido <q>ins</q></h2> 
+    <p>usamos a teg <q>ins /ins</q> para sublinhar o texto <br>
+    dando a ideia de que o texto foi inserido depois no documento</p>   
+    <h2>Texto sobrescrito <q>sup</q></h2>
+    <p>usamos a teg <q>sup /sup</q> para elevar algo escrito em relação a outro <br>
+    ex. x <sup>10</sup> x elevado a decima potencia, o 10 foi elevado com a tag <q>sup</q></p> 
+    <h2>Texto subescrito <q>sub</q></h2>
+    <p>usamos a teg sub /sub para colocar un dado escrito logo abaixo de outro <br>
+    ex. h <sub>2</sub>o, o <q>2</q> foi colocado entre a tag <q>sub /sub</q> para ficar logo abaixo de <q>h</q></p> 
+    
+        <h2>Usando a teg <q><isn>code /code</isn></q></h2>   
+    <p>a teg <q>code /code</q> permite escrever um codigo de programa como textosem formatação <br>se adicionarmos a teg <q>pre /pre</q> o texto mantem a formatação original</p>
+    <p>exemplo:</p>
+        <h1>exemplo de codigo em pyton</h1> 
+        <pre><code>
+            num = int(input('digite um numero'))
+            if num % 2 == 0:
+                print(f'o numero {num}e par)
+                esclse 
+                print(f'on numero{num} e impar')
+                print('fim programa')  
+        </code></pre>
+    <h2>usando teg <q style="font-family: Verdana, Geneva, Tahoma, sans-serif; background-color: coral;color: cyan;">blockequote /blockquote</q></h2>
+        <p>a teg e usaba para colocar entre aspas um longo trecho de palavras como um paragrafi inteiro ou mais</p>
+        <p>podemos usar tambem o parametro <q><strong>cite</strong></q> dentro da teg <br>para adiciomar um <q>link</q></p>
+        <p>ex: <q>blockquote <ins><strong>cite</strong></ins>="link.../blockquote</q></p>
+        <h2>usando parametro <q style="color: darkred;"><strong>cite</strong></q>
+            <p>O parametro e usado para chamar um <q><strong>link</strong></q> <br>um endereço de diferente da pagina atual que pode conter qualquer coisa de texto a videos</p> 
+
+        </h2>
+        <h2>Usando a teg <q><strong>abbr</strong></q></h2>
+        <p>A teg <q><strong>abbr</strong></q> e usada para destacar <br>o significado de um objeto no texto seja sigla, imagem ou qualquer outro objeto</p>
+        <p><q>abbr title="descrição" /abbr</q></p>
+        <p>Eu estou estudando <abbr title="hiper text markup language">HTML5</abbr> para criar sites</p>
+
+    <h2>Ordered list  <q><strong>&lt; ol - /ol &gt; e &lt;li - /li &gt;</strong></q></h2>
+    <p>usado para criar uma lista</p>
+    <p>&lt;ol &gt; &lt;/ol &gt; cria lista </p>
+    <p>&lt;li &gt; &lt;/li &gt; cria o corpo da lista</p>
+    <p>ex:
+        &lt;ol &gt;<br>
+            &lt;li &gt; item &lt; /li &gt;<br>
+            &lt;li &gt; item &lt; /li &gt;<br>
+            &lt;li &gt; item &lt /li &gt;<br>
+            o fechamento de <strong>li</strong> e opcional <br>
+
+            o fechamento de <strong>ol</strong> e obrigatorio 
+    </p>
+    <ol>
+        <li>banana</li>
+        <li>feijão</li>
+        <li>abobrinha</li>
+        <li>cebola</li>
+    </ol>
+    <p>a tag &lt;lo &gt; possui um parametro <Q><strong>type</strong></Q> que permite configurar o tipo de marcador da lista <br>
+    As opções  são: <br>
+        1 - valor padrão, cria lista numerica Ex. 1, 2, 3, 4, ... <br>A- cria lista alfabetica Ex. A, B, C, D... <br>
+        a - cria lista alfabetica em minusculo <br>
+        I - cria lista em algarismo romano maiusculo <br>i - cria lista em algarismo romano minusculo</p>
+
+
+</body>
+</html>
