@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+
+   <html lang="pt-br">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="shortcut icon" href="../exercicio1 (2).ico" type="image/x-icon">
+   <link rel="stylesheet" href="../ex6/estilo.css">
+
+   <title>formulario</title>
+   <script>
+      function cac_total(){
+         var qtd = parseInt(document.getElementById('cqt').value);
+         tot = qtd * 1500;
+         document.getElementById('cpc').value = tot;
+      }
+   </script>
+</head>
+<body>
+   <h1>Criação de formulario</h1>
+   <a href="../ex15/indice.html">indice</a> <a href="../ex14/index.html">pg 12</a>
+   <form method="post" id="fcontato" action="mail para rlvargas@sapo.pt" oninput="cac_total();">
+      <fieldset>
+      <legend id="usuario">Identificação do usuario</legend>
+      
+         <p><label for="cnome">nome:</label> <input type="text" name="tnome" id="cnome"size="20"maxleng="30"
+         placeholder="nome completo"></p>
+      
+      <p>email: <input type="email"name="temail" id="cemail"size="20"
+      maxlength="40"placeholder="nome@xxx.com.br">
+       senha: <input type="password"name="tsenha" id="csenha"size="8"maxleng="8"
+      placeholder="8 digitos"></p>
+      
+      <fieldset id="sexo"><legend>sexo:</legend>
+         <label for="cmasc">-masculino</label> <input type="radio" name="tsexo"id="cmasc">
+         <label for="cfem"> -feminino</label> <input type="radio"name="tsexo"id="cfem"></fieldset>
+      data de nascimento: <input type="date"name="tdata" id="cdata">
+      </fieldset>
+      <fieldset>
+      <legend id="end">Endereço do usuario</legend>
+         <p>logradouro: <input type="text"name="tlog" id="clog" size="20" maxlength="98" placeholder="endereço">
+          numero: <input type="number" name="tnum" id="cnum" min="0" max="99999">
+          complemento: <input type="text" name="tcompl" id="ccompl" size="5" maxlength="5"placeholder="1A"></P>
+         <p>nome do predio: <input type="text" name="tnp" id="cnp" size="20" maxlength="20" placeholder="ex. res. la place">
+          bloco: <input type="text" name="tbloco" id="cbloco" size="3" maxlength="3">
+          apartamento: <input type="number" name="tap" id="cap" min="1" max="999"></p>
+         <p><label for="ccid">cidade:</label>
+         <input type="text" name="tcid" id="ccid" maxlength="30" size="20" placeholder="sua cidade" list="cidade">
+               <datalist id="cidade">
+               <option value="sp"></option>
+                <option value="sorocaba"></option>                          
+               <option value="petr"></option>
+               <option value="jf"></option>
+               <option value="rp"></option>
+               </datalist>
+            
+         <label for="cest">estado:</label>
+         <select name="test" id="cest">
+         <optgroup label="região sudeste">
+            <option value="RJ">Rio de Janairo</option>
+            <option value="SP">São Paulo</option>
+            <option value="MG">Minas Gerais</option>
+         </optgroup>
+         <option value="PR">Parana</option>
+         </select></p>
+      </fieldset>
+      <fieldset>
+      <legend id="msn">Mensagem do usuario</legend>
+         <label for="curg">Grau de urgencia:</label>
+         <input type="range" name="turg" id="curg" min="0" max="10"> <br>
+         <label for="cmen">Mensagem</label>
+         <textarea name="tmen" id="cmen" cols="30" rows="10"></textarea>
+      </fieldset>
+      <fieldset>
+      <legend id="quero"><legend>quero um guclas</legend>
+      <input type="checkbox" name="tped" id="cped">
+         Gostaria de adquirir um guclas quando disponivel
+         <label for="ccor">cor:</label>
+         <input type="color" name="tcor" id="ccor">
+         <label for="cqt">qt:</label>
+         <input type="number" name="tqt" id="cqt" min="0" max="5" value="0"> <br>
+         <label for="cpc">preço:</label>
+         <input type="text" name="tpc" id="cpc" placeholder="total a pagar" >
+
+      </fieldset>
+      <input type="submit" value="enviar">
+   </form>
+   <h1>Construcao do codigo para o formulario</h1>
+   <p>Comessamos abrindo uma teg<strong> &lt;form>&lt;/form></strong> que vai englobar todo o conteudo do formulario <br>
+   Dentro do 'form' colocamos uma <strong>&lt;fieldset>&lt;/fieldset></strong> para cada grupo de informações <br></p>
+  <p> Para  campo texto usamos &lt;input type="text" name="tnome do campo" id="cnome do campo" size="valor" maxlength="valor" placeholder="descrição"> </p>
+   <ul><legend>Componentes das linhas de comando</legend>
+   <li>input</li> entrada de dados
+   <li>type="---"</li>tipo de dados
+      <ul><legend>parametros para 'type="---"</legend>
+      <li>text</li>entrada de textos como, 'nome,endereço...'
+      <li>numero</li>dados numericos
+      <li>email</li>confere se o email foi digitado de forma correta
+      <li>password</li>digitação de senha, não mostra os caracteres digitados, so aparece asteriscos
+      <li>range</li>cria uma barra graduada com 'min="x" para minimo; 'max="x" para maximo  'etep="x"'para graduação
+      <li>checkbox</li> cria uma caixa de checagem para marcar itens selecionados
+      <li>color</li> da acesso a caixa de cores para o cliente escolher a cor
+      <li>submit</li> cria um botão cujo valor sera definido em 'script'
+      </ul>
+   <li>name="tnome do campo"</li> o 't' e pada diferenciar do 'id'que e preenchido com o mesmo nome
+   <li>id="cnome do campo</li> o 'c' e para diferenciar do 'name'
+   <li>size="valor"</li>tamanho maximo da caixa de texto, não limita os caracteres
+   <li>maxlength="valor"</li> limita a quantidades de caracteres a ser digitado
+   <li>radio</li>escolha de opção tipo sim, não ; nasculino , feminino...
+   <li>date</li>cria um campo data que abre um calendario quando clicar no campo
+   </ul> 
+   Para que uma opção fique marcada por padrão colocamos o parametro 'checked' depois de 'id' <br>
+   > Para campo 'email' &lt;input type="email"name="temail" id="cemail"size="20" maxlength="40"placeholder="nome@xxx.com.br"> <br>
+   > para campo 'senha'  &lt;input type="password"name="tsenha" id="csenha"size="8"maxleng="8"placeholder="8 digitos"> <br>
+   > Para campo 'numero' &lt;input type="number" name="tnum" id="cnum" min="0" max="99999"> <br>
+    <ul><legend>Complementos de 'type="number"</legend>
+     <li>min="x"</li>valor minimo de entrada, ex. 'min="1" ' não aceita valor menor que 1 
+     <li>max="x"</li>valor maximo, ex. max="999" não aceita valor maior que '999'
+    </ul>
+   <p>> Para campo 'radio' &lt;fieldset id="sexo">&lt;legend>sexo:&lt;/legend></p> 
+         <p>
+            &lt;label for="cmasc">-masculino &lt;/label> &lt;input type="radio" name="tsexo"id="cmasc"> <br>
+            &lt;label for="cfem"> -feminino &lt;/label> &lt;input type="radio"name="tsexo"id="cfem">&lt;/fieldset>
+         </p> 
+         <p>
+            > E aconselhavel colocar o grupo de secolha 'type="radio" dentro de uma 'fieldset mesmo que ja faça parte de outro grupo </p>
+            <p>> Serventia do &lt;label>&lt;/label>
+         </p>
+            <p>cria uma interação com o nome do campo para quando clicarmo no nome  evidencia a caixa de texto relacionada e posiciona o cursor automaticamente</p>
+         <p>ex.<strong>&lt;label for="cnome">nome:&lt;/label></strong> </p>
+         <p>
+            O 'cnome ' e a 'id' que relaciona o titulo nom' ao campo nome <br>
+            &lt;label for="<strong>cnome</strong>">nome:&lt;/label> &lt;input type="text" name="tnome" id="<strong>cnome</strong>"size="20"maxleng="30"
+            placeholder="nome completo">
+         </p>
+         <p><mark>Deve ser uma pratica comum proque alem de util os navegadores levam em consideraçao como um site bem construido.</mark></p>
+   <p>
+      <p>> Para campo 'data' &lt;input type="date"name="tdata" id="cdata"></p>
+       <p> > Para campo 'estado' usamos 'select for="---"' para criar um campo de seleção e  um 'optgroup label="" para criar grupos por região dentro de 'estado> <br>
+       &lt;label for="cest">estado:&lt;/label> <br>
+       &lt;select name="test" id="cest"> <br>
+       &lt;optgroup label="região sudeste"> <br>
+          &lt;option value="RJ">Rio de Janairo&lt;/option> <br>
+          &lt;option value="SP">São Paulo&lt;/option> <br>
+          &lt;option value="MG">Minas Gerais&lt;/option> <br>
+       &lt;/optgroup> <br>
+       &lt;option value="PR">Parana&lt;/option> <br>
+       &lt;/select></p> <br>
+       <p>> para configurarmos o campo cidade usamos a boa e velha 'input type="texe" com um adicional 'list="nome do campo",&lt;datalist id="nome do campo"> e &lt;option value="nome da cidade" isso cria uma caixa de listagem</p>
+       <p>
+         <p>&lt;label for="ccid">cidade:&lt;/label> <br>
+            &lt;input type="text" name="tcid" id="ccid" maxlength="30" size="20" placeholder="sua cidade" list="cidade"> <br>
+                  &lt;datalist id="cidade"> <br>
+                  &lt;option value="sp">&lt;/option> <br>
+                   &lt;option value="sorocaba">&lt;/option> <br>                          
+                  &lt;
+                  option value="petr">&lt;
+                  /option> <br>
+                  &lt;
+                  option value="jf">&lt;
+                  /option> <br>
+                  &lt;
+                  option value="rp">&lt;
+                  /option> <br>
+                  &lt;
+                  /datalist>  
+       </p>
+         <p>. Campo 'mensagem'</p>
+         <p>Mensagem usa uma teg &lt;textarea> <br>
+         Cria um campo com varias linhas diferente do 'type text' <br>
+          &lt;textarea name="tmen" id="cmen" cols="30" rows="10"> &lt;/textarea> <br>tem os valores: <br>
+         'cols'determina a altura padão <br>
+         'rows' determina a largura padrão da caixa </p>
+         <p>> caixa de checagem seleção de itens <br>
+         Cria uma xaixa para marcar os itens selecionados <br>&lt;input type="checkbox" name="tped" id="cped"></p>
+         <p>Campo preço <br>
+            Para que o campo preço seja preenchido automaticamente de acorde com a quantidade e preciso uma configuração es 'script'
+         </p>
+         <p>
+            &lt;script>
+               function cac_total(){
+                  var qtd = parseInt(document.getElementById('cqt').value);
+                  tot = qtd * 1500;
+                  document.getElementById('cpc').value = tot;
+               }
+            &lt;/script>
+         </p>
+         <p>e nescessario colocar uma chamada  'oninputpara a variavel 'calc_total no 'form', 'oninput="calc_total"</p>
+         <p>No 'form' tambem e colocado uma chamada para o botão enviar do campo 'mensagem', isso faz com que a mensagem seja enviada para o email do responsavel</p>
+         <p>&lt;form method="post" id="fcontato" action="mail para rlvargas@sapo.pt" oninput="cac_total();">&lt;/form></p>
+
+</body> 
+</html>
